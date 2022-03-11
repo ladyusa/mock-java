@@ -20,6 +20,10 @@ public class BankAccount {
         balance -= amount;
     }
 
+    public void addInterest(double rate) {
+        balance = balance + (balance * rate);
+    }
+
     public double getBalance() {
         return balance;
     }

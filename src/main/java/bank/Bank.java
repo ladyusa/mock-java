@@ -20,4 +20,11 @@ public class Bank {
         accounts.get(from).withdraw(amount);
         accounts.get(to).deposit(amount);
     }
+
+    public void giveInterestAll(double rate) {
+        for (BankAccount account : accounts.values()) {
+            account.addInterest(rate);
+            System.out.println("After add interest");
+        }
+    }
 }
