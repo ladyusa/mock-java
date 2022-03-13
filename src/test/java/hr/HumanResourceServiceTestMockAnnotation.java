@@ -22,7 +22,7 @@ public class HumanResourceServiceTestMockAnnotation {
     }
 
     @Test
-    void testValidateCustomer() {
+    void testRaiseSalaryAll() {
         double rate = 0.1;
 
         hr.addEmployee(mockEmployee1);

@@ -8,7 +8,7 @@ import static org.mockito.Mockito.verify;
 public class HumanResourceServiceTestMock {
 
     @Test
-    void testValidateCustomer() {
+    void testRaiseSalaryAll() {
         // create mock objects
         Employee mockEmployee1 = mock(Employee.class);
         Employee mockEmployee2 = mock(Employee.class);
