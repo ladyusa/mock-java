@@ -15,7 +15,7 @@ public class LogAnalyzer {    // CUT
             try {
                 webService.logError("Filename too short: " + fileName);
             } catch (Exception e) {
-                emailService.send("abc@xyz.com", "subject", e.getMessage());
+                emailService.send("admin@xyz.com", "subject", e.getMessage());
             }
         }
         // ...

@@ -24,7 +24,6 @@ public class Bank {
     public void giveInterestAll(double rate) {
         for (BankAccount account : accounts.values()) {
             account.addInterest(rate);
-            System.out.println("After add interest");
         }
     }
 }

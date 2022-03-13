@@ -21,6 +21,6 @@ public class LogAnalyzerMockStubTest {
         analyzer.analyze("abc.ext");
 
         // verify
-        verify(mockEmail).send("abc@xyz.com", "subject", "fake exception");
+        verify(mockEmail).send("admin@xyz.com", "subject", "fake exception");
     }
 }

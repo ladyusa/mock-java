@@ -15,6 +15,8 @@ public class ExampleMockTest {
         mockList.add(0);
         mockList.add(1);
 
+        System.out.println( mockList.get(9) );
+
         verify(mockList, times(2)).add(anyInt());
     }
 }
