@@ -12,7 +12,7 @@ public class Bank {
         this.accounts = new HashMap<>();
     }
 
-    public void addAccount(BankAccount account) {
+    public void openAccount(BankAccount account) {
         accounts.put(account.getName(), account);
     }
 
