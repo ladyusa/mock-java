@@ -16,8 +16,8 @@ public class BankTestMock {
 
         // create CUT and setting up
         Bank bank = new Bank("Test Bank");
-        bank.addAccount(mockAccountA);
-        bank.addAccount(mockAccountB);
+        bank.openAccount(mockAccountA);
+        bank.openAccount(mockAccountB);
 
         // call method under test
         bank.transfer("A", "B", 1000);

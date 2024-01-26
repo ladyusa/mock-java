@@ -28,8 +28,8 @@ public class BankTestMockAnnotation {
         when(mockAccountB.getName()).thenReturn("B");
 
         // setting up
-        bank.addAccount(mockAccountA);
-        bank.addAccount(mockAccountB);
+        bank.openAccount(mockAccountA);
+        bank.openAccount(mockAccountB);
 
         // call method under test
         bank.transfer("A", "B", 1000);
