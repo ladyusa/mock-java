@@ -1,5 +1,5 @@
 package loganalyzerwithemail;
 
-public interface WebService {
+public interface LogService {
     void logError(String message);
 }

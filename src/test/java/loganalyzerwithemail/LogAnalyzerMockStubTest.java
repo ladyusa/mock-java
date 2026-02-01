@@ -7,17 +7,17 @@ import static org.mockito.Mockito.*;
 public class LogAnalyzerMockStubTest {
 
     @Test
-    public void testAnalyzeWebServiceThrowsSendEmail() {
+    public void testAnalyzeServiceThrowsSendEmail() {
         // mock and stub creation
-        WebService stubWeb = mock(WebService.class);
+        LogService stubService = mock(LogService.class);
         EmailService mockEmail = mock(EmailService.class);
 
         // stubbing
         doThrow(new RuntimeException("fake exception"))
-                .when(stubWeb).logError(anyString());
+                .when(stubService).logError(anyString());
 
         // CUT and setting up + calling method under test
-        LogAnalyzer analyzer = new LogAnalyzer(stubWeb, mockEmail);
+        LogAnalyzer analyzer = new LogAnalyzer(stubService, mockEmail);
         analyzer.analyze("abc.ext");
 
         // verify

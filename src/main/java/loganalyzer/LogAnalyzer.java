@@ -2,9 +2,9 @@ package loganalyzer;
 
 public class LogAnalyzer {    // CUT
 
-    private WebService service;
+    private LogService service;
 
-    public LogAnalyzer(WebService service) {
+    public LogAnalyzer(LogService service) {
         this.service = service;
     }
 

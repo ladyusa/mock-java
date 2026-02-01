@@ -8,9 +8,9 @@ import static org.mockito.Mockito.verify;
 public class LogAnalyzerTest {
 
     @Test
-    public void testAnalyzeTooShortFileNameCallsWebService() {
+    public void testAnalyzeTooShortFileNameCallsService() {
         // mock creation
-        WebService mockService = mock(WebService.class);
+        LogService mockService = mock(LogService.class);
         LogAnalyzer analyzer = new LogAnalyzer(mockService);
         analyzer.analyze("abc.ext");
 

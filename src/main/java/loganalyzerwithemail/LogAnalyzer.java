@@ -2,18 +2,18 @@ package loganalyzerwithemail;
 
 public class LogAnalyzer {    // CUT
 
-    private WebService webService;
+    private LogService logService;
     private EmailService emailService;
 
-    public LogAnalyzer(WebService service, EmailService email) {
-        this.webService = service;
+    public LogAnalyzer(LogService service, EmailService email) {
+        this.logService = service;
         this.emailService = email;
     }
 
     public void analyze(String fileName) {
         if (fileName.length() < 8) {
             try {
-                webService.logError("Filename too short: " + fileName);
+                logService.logError("Filename too short: " + fileName);
             } catch (Exception e) {
                 emailService.send("admin@xyz.com", "subject", e.getMessage());
             }
